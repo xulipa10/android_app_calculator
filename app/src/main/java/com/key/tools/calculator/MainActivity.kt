@@ -19,8 +19,5 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        var botao = findViewById<Button>(R.id.meubutaum)
-
-
     }
 }
