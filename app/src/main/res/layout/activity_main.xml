@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:onClick="abrirTaxa"
-            android:text="@string/botaum" />
+            android:text="taxa metabolica basal" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

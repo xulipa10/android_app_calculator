@@ -47,4 +47,5 @@
     <string name="altura_em_centimetros">Altura em centimetros</string>
     <string name="idade">Idade</string>
     <string name="peso_kg">Peso kg</string>
+    <string name="TMB" />
 </resources>
