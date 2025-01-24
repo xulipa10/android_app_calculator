@@ -18,6 +18,7 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
     var altura_em_cm = 0
     var idade = 0
     var sexo = ""
+    var teste = null
 
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
