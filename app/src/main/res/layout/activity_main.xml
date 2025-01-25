@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="312dp"
         android:layout_height="236dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
 
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,6 +27,12 @@
             android:layout_marginTop="10dp"
             android:onClick="abrirTaxa"
             android:text="taxa metabolica basal" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
