@@ -7,6 +7,7 @@ android {
     namespace = "com.key.tools.calculator"
     compileSdk = 34
 
+
     defaultConfig {
         applicationId = "com.key.tools.calculator"
         minSdk = 30

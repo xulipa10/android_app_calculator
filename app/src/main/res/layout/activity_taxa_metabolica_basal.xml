@@ -90,5 +90,11 @@
                 android:text="Mulher" />
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/aviso_check_box"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:textColor="#9B0606" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
