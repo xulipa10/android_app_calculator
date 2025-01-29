@@ -3,15 +3,18 @@ package com.key.tools.calculator
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.renderscript.ScriptGroup.Binding
+import android.text.TextWatcher
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.addTextChangedListener
 import com.google.android.material.textfield.TextInputEditText
 import com.key.tools.calculator.databinding.ActivityTaxaMetabolicaBasalBinding
 
@@ -24,7 +27,7 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
     var altura_em_cm = 0
     var idade = 0
     var sexo = ""
-
+    var check = 0
 
 
 
@@ -48,22 +51,6 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
 
            }
 
-    override fun onStart() {
-        super.onStart()
-        var male_check = all_widgets.masculino.isChecked()
-        var female_check = all_widgets.feminino.isChecked()
-
-
-        if (male_check == true and female_check == true){
-            all_widgets.avisoCheckBox.text = "Por favor marque apenas um checkbox"
-        }else{
-            all_widgets.avisoCheckBox.text = ""
-        }
-
-
-    }
-
-
 
 
 
@@ -73,6 +60,15 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
 
 
     fun onClick(view: View) {
+        var nada = all_widgets.feminino.isChecked
+        Toast.makeText(applicationContext, nada.toString(), Toast.LENGTH_LONG).show()
+
+
+
+
+
+
+    }
 
 
 
@@ -80,7 +76,28 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
         var tmb_masculino = 66.5 + (13.75 * peso) + (5.003 * altura_em_cm) - (6.75 * idade)
 
 
+    fun feminino(view: View) {
+        if (all_widgets.feminino.isChecked == false){
+            all_widgets.feminino.toggle()
+        }else if(all_widgets.feminino.isChecked == true){
+            all_widgets.feminino.toggle()
+        }
+        Toast.makeText(applicationContext, all_widgets.feminino.isChecked.toString(), Toast.LENGTH_LONG).show()
+
+
+    }
+
+    fun masculino(view: View) {
+        if (all_widgets.masculino.isChecked == false){
+            all_widgets.masculino.toggle()
+        }else if(all_widgets.masculino.isChecked == true){
+            all_widgets.masculino.toggle()
+        }
+        Toast.makeText(applicationContext, all_widgets.masculino.isChecked.toString(), Toast.LENGTH_LONG).show()
+
     }
 
 
 }
+
+

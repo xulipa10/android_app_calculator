@@ -22,8 +22,8 @@
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
-        android:layout_width="390dp"
-        android:layout_height="263dp"
+        android:layout_width="388dp"
+        android:layout_height="304dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/tataum"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,6 +78,7 @@
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:onClick="masculino"
                 android:text="Homem" />
 
             <CheckBox
@@ -87,13 +88,14 @@
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:onClick="feminino"
                 android:text="Mulher" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/aviso_check_box"
+            android:id="@+id/avisocheckbox"
             android:layout_width="match_parent"
-            android:layout_height="43dp"
+            android:layout_height="60dp"
             android:textColor="#9B0606" />
 
     </LinearLayout>
