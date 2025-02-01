@@ -48,4 +48,7 @@
     <string name="idade">Idade</string>
     <string name="peso_kg">Peso kg</string>
     <string name="TMB" />
+    <string name="calcular">calcular</string>
+    <string name="homem">Homem</string>
+    <string name="mulher">Mulher</string>
 </resources>

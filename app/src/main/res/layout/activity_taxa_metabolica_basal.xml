@@ -5,15 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="on"
     tools:context=".TaxaMetabolicaBasal">
 
     <Button
-        android:id="@+id/tataum"
+        android:id="@+id/calcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="@string/button"
+        android:text="@string/calcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +23,7 @@
         android:layout_width="388dp"
         android:layout_height="304dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/tataum"
+        app:layout_constraintBottom_toTopOf="@+id/calcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -78,8 +76,8 @@
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:onClick="masculino"
-                android:text="Homem" />
+                android:text="@string/homem"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <CheckBox
                 android:id="@+id/feminino"
@@ -88,15 +86,17 @@
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:onClick="feminino"
-                android:text="Mulher" />
+                android:text="@string/mulher"
+                tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/avisocheckbox"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:textColor="#9B0606" />
+            android:textColor="#9B0606"
+            android:visibility="visible"
+            tools:visibility="visible" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
