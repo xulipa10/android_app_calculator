@@ -51,4 +51,6 @@
     <string name="calcular">calcular</string>
     <string name="homem">Homem</string>
     <string name="mulher">Mulher</string>
+    <string name="taxa_metabolica_basal">TAXA METABOLICA BASAL</string>
+    <string name="harris_benedict">(Harris-Benedict)</string>
 </resources>

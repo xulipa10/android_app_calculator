@@ -5,6 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
     tools:context=".TaxaMetabolicaBasal">
 
     <Button
@@ -20,13 +22,16 @@
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
-        android:layout_width="388dp"
-        android:layout_height="304dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="250dp"
+        android:layout_height="290dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/calcular"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.769">
 
         <EditText
             android:id="@+id/text_peso"
@@ -34,11 +39,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:autofillHints=""
+            android:background="@color/white"
             android:ems="10"
             android:hint="@string/peso_kg"
             android:inputType="number"
             android:minHeight="48dp"
-            android:textColorHint="#8D6E63" />
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
 
         <EditText
             android:id="@+id/text_idade"
@@ -46,11 +53,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:autofillHints=""
+            android:background="@color/white"
             android:ems="10"
             android:hint="@string/idade"
             android:inputType="number"
             android:minHeight="48dp"
-            android:textColorHint="#8D6E63" />
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
 
         <EditText
             android:id="@+id/text_altura"
@@ -58,11 +67,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:autofillHints=""
+            android:background="@color/white"
             android:ems="10"
             android:hint="@string/altura_em_centimetros"
             android:inputType="number"
             android:minHeight="48dp"
-            android:textColorHint="#8D6E63" />
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,7 +87,9 @@
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:background="@color/white"
                 android:text="@string/homem"
+                android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <CheckBox
@@ -86,7 +99,9 @@
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:background="@color/white"
                 android:text="@string/mulher"
+                android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -94,9 +109,43 @@
             android:id="@+id/avisocheckbox"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:textColor="#9B0606"
+            android:textColor="@color/material_dynamic_neutral10"
             android:visibility="visible"
             tools:visibility="visible" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="356dp"
+        android:layout_height="34dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/taxa_metabolica_basal"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.753"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="317dp"
+        android:layout_height="28dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/harris_benedict"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TextSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
