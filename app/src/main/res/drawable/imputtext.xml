@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+        <!-- Cor de fundo -->
+    <solid android:color="#FFFFFF"/>
+
+
+    <stroke
+            android:color="#0000FF"/>
+    <stroke android:width="4dp"/>
+
+        <!-- Cantos arredondados (opcional) -->
+    <corners android:radius="100dp"/> <!-- Defina o raio do arredondamento, se desejar -->
+</shape>
