@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nivel_de_atividades"
+        android:title="@string/tmb" />
+    <item
+        android:id="@+id/sedentário"
+        android:title="@string/sedentario" />
+    <item
+        android:id="@+id/l_ativo"
+        android:title="@string/levemente_ativo" />
+    <item
+        android:id="@+id/m_ativo"
+        android:title="@string/moderadamente_ativo" />
+    <item
+        android:id="@+id/muito_ativo"
+        android:title="@string/muito_ativo" />
+    <item
+        android:id="@+id/atleta"
+        android:title="@string/atleta_ou_extremo_ativo" />
+</menu>

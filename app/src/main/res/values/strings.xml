@@ -53,4 +53,12 @@
     <string name="mulher">Mulher</string>
     <string name="taxa_metabolica_basal">TAXA METABOLICA BASAL</string>
     <string name="harris_benedict">(Harris-Benedict)</string>
+    <string name="resultado">Resultado</string>
+    <string name="tmb">TMB (repouso)</string>
+    <string name="sedentario">Sedentário</string>
+    <string name="levemente_ativo">Levemente ativo</string>
+    <string name="moderadamente_ativo">Moderadamente ativo</string>
+    <string name="muito_ativo">Muito ativo</string>
+    <string name="atleta_ou_extremo_ativo">Atleta ou extremo ativo</string>
+    <string name="nivel_de_atividades">Nivel de atividades</string>
 </resources>

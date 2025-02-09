@@ -23,8 +23,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="250dp"
-        android:layout_height="290dp"
+        android:layout_width="243dp"
+        android:layout_height="387dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/calcular"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         <EditText
             android:id="@+id/text_peso"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:autofillHints=""
             android:background="@drawable/imputtext"
@@ -51,7 +51,7 @@
         <EditText
             android:id="@+id/text_idade"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:autofillHints=""
             android:background="@drawable/imputtext"
@@ -66,7 +66,7 @@
         <EditText
             android:id="@+id/text_altura"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:autofillHints=""
             android:background="@drawable/imputtext"
@@ -76,11 +76,36 @@
             android:inputType="number"
             android:minHeight="48dp"
             android:textColor="@color/black"
-            android:textColorHint="@color/black" />
+            android:textColorHint="@color/black"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/nivel_de_atividades"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/imputtext"
+            android:gravity="center"
+            android:text="@string/nivel_de_atividades"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/resultado_f"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/imputtext"
+            android:gravity="center"
+            android:text="@string/resultado"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="normal" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="47dp"
+            android:layout_height="46dp"
             android:orientation="horizontal">
 
             <CheckBox
@@ -114,6 +139,7 @@
             android:layout_height="60dp"
             android:textColor="@color/material_dynamic_neutral10"
             android:visibility="visible"
+            tools:ignore="VisualLintBounds"
             tools:visibility="visible" />
 
     </LinearLayout>

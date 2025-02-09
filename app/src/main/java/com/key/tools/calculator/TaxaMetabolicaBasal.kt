@@ -2,22 +2,18 @@ package com.key.tools.calculator
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.renderscript.ScriptGroup.Binding
-import android.text.TextWatcher
-import android.view.View
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.widget.addTextChangedListener
-import com.google.android.material.textfield.TextInputEditText
 import com.key.tools.calculator.databinding.ActivityTaxaMetabolicaBasalBinding
-import kotlin.math.roundToInt
 
 
 class TaxaMetabolicaBasal : AppCompatActivity() {
@@ -54,24 +50,36 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
         val ep = findViewById<EditText>(R.id.text_peso)
         val ei = findViewById<EditText>(R.id.text_idade)
         val ea = findViewById<EditText>(R.id.text_altura)
+        var valor_atividade = 0.0
+        val nivel_atividade = findViewById<TextView>(R.id.nivel_de_atividades)
+        val resultado_f = findViewById<TextView>(R.id.resultado_f)
 
 
 
         calcular.setOnClickListener {
+            var resultado = 1.0
+
+            if (masculino.isChecked){
+                sexo = "M"
+            }
+            else if (feminino.isChecked){
+                sexo = "F"
+            }
             if(ep.text.toString() == "" || ei.text.toString() == "" || ea.text.toString() == ""){
-                aviso.text = "Preencha todos os campos." }
+                aviso.text = "  Preencha todos os campos." }
             else{
                 peso = ep.text.toString().toDouble()
                 idade = ei.text.toString().toInt()
                 altura_em_cm = ea.text.toString().toInt()
                 tmb_masculino = 66.5 + (13.75 * peso) + (5.003 * altura_em_cm) - (6.75 * idade)
                 tmb_feminino = 655.1 + (9.563 * peso) + (1.850 * altura_em_cm) - (4.676 * idade)
-                Toast.makeText(applicationContext, tmb_feminino.toString() +"e"+ tmb_masculino.toString(), Toast.LENGTH_LONG).show()
-
-
-
-
+                if (masculino.isChecked){resultado = tmb_masculino * valor_atividade}
+                if (feminino.isChecked){resultado = tmb_feminino * valor_atividade}
+                if (sexo == "M"){resultado_f.text = resultado.toInt().toString() + "  kcal/dia"}
+                if (sexo == "F"){resultado_f.text = resultado.toInt().toString() + "  kcal/dia"}
             }
+
+
 
 
 
@@ -92,10 +100,52 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
 
                 }
 
-
-
-
             }
+
+        nivel_atividade.setOnClickListener {
+
+            PopupMenu(applicationContext, nivel_atividade).apply {
+                menuInflater.inflate(R.menu.tmb_menu, this.menu)
+                setOnMenuItemClickListener { item : MenuItem ->
+                    when (item.itemId){
+                        R.id.nivel_de_atividades -> {
+                            nivel_atividade.text = "TMB (repouso)"
+                            valor_atividade = 1.0
+                            true
+                        }
+                        R.id.sedentário -> {
+                            nivel_atividade.text = "Sedentário"
+                            valor_atividade = 1.2
+                            true
+                        }
+                        R.id.l_ativo -> {
+                            nivel_atividade.text = "Levemente ativo"
+                            valor_atividade = 1.375
+                            true
+                        }
+                        R.id.m_ativo -> {
+                            nivel_atividade.text = "Moderadamente ativo"
+                            valor_atividade = 1.55
+                            true
+                        }
+                        R.id.muito_ativo -> {
+                            nivel_atividade.text = "Muito ativo"
+                            valor_atividade = 1.725
+                            true
+                        }
+                        R.id.atleta -> {
+                            nivel_atividade.text = "atleta"
+                            valor_atividade = 1.9
+                            true
+                        }
+
+                        else -> {false}
+                    }
+
+                }
+                show()
+            }
+        }
 
 
 
@@ -105,23 +155,6 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
 
 
         }
-
-    fun calcularTaxa(){
-        if (all_widgets.masculino.isChecked){
-            tmb_masculino = 66.5 + (13.75 * peso) + (5.003 * altura_em_cm) - (6.75 * idade)
-            all_widgets.avisocheckbox.text = ""
-            sexo = "M" }
-        else if (all_widgets.feminino.isChecked){
-            tmb_feminino = 655.1 + (9.563 * peso) + (1.850 * altura_em_cm) - (4.676 * idade)
-            all_widgets.avisocheckbox.text = ""
-            sexo ="F" }
-        else{
-            sexo = ""
-
-        }
-        Toast.makeText(applicationContext, tmb_feminino.toString() + tmb_masculino.toString(), Toast.LENGTH_LONG).show()
-
-           }
 
 
 
