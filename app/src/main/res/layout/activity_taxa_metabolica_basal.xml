@@ -202,7 +202,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512"
+        app:layout_constraintVertical_bias="0.517"
         app:srcCompat="@drawable/triangulo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
