@@ -176,10 +176,10 @@
         android:id="@+id/calcular"
         style="@style/BotaoPersonalizado"
         android:layout_width="158dp"
-        android:layout_height="47dp"
-        android:elevation="10dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/background_button1"
+        android:elevation="10dp"
         android:text="@string/calcular"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textStyle="bold|italic"
@@ -190,5 +190,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:shapeAppearance="@style/BotaoPersonalizado" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="29dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.512"
+        app:srcCompat="@drawable/triangulo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
