@@ -6,32 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:backgroundTint="@color/white"
+    android:backgroundTint="@color/design_default_color_secondary"
     tools:context=".TaxaMetabolicaBasal">
-
-    <Button
-        android:id="@+id/calcular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/calcular"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9"
-        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="243dp"
         android:layout_height="387dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.769">
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
             android:id="@+id/text_peso"
@@ -40,6 +27,7 @@
             android:layout_marginTop="10dp"
             android:autofillHints=""
             android:background="@drawable/imputtext"
+            android:elevation="10dp"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/peso_kg"
@@ -55,6 +43,7 @@
             android:layout_marginTop="10dp"
             android:autofillHints=""
             android:background="@drawable/imputtext"
+            android:elevation="10dp"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/idade"
@@ -70,6 +59,7 @@
             android:layout_marginTop="10dp"
             android:autofillHints=""
             android:background="@drawable/imputtext"
+            android:elevation="10dp"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/altura_em_centimetros"
@@ -85,6 +75,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/imputtext"
+            android:elevation="10dp"
             android:gravity="center"
             android:text="@string/nivel_de_atividades"
             android:textColor="@color/black"
@@ -97,6 +88,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/imputtext"
+            android:elevation="10dp"
             android:gravity="center"
             android:text="@string/resultado"
             android:textColor="#000000"
@@ -115,7 +107,8 @@
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:background="@color/white"
+                android:background="@drawable/imputtext"
+                android:elevation="10dp"
                 android:text="@string/homem"
                 android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -127,7 +120,8 @@
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:background="@color/white"
+                android:background="@drawable/imputtext"
+                android:elevation="10dp"
                 android:text="@string/mulher"
                 android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -148,7 +142,7 @@
         android:id="@+id/textView"
         android:layout_width="356dp"
         android:layout_height="34dp"
-        android:background="@color/white"
+        android:background="@color/design_default_color_secondary"
         android:gravity="center"
         android:text="@string/taxa_metabolica_basal"
         android:textColor="@color/black"
@@ -166,7 +160,7 @@
         android:id="@+id/textView2"
         android:layout_width="317dp"
         android:layout_height="28dp"
-        android:background="@color/white"
+        android:background="@color/design_default_color_secondary"
         android:gravity="center"
         android:text="@string/harris_benedict"
         android:textColor="@color/black"
@@ -177,4 +171,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="TextSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calcular"
+        style="@style/BotaoPersonalizado"
+        android:layout_width="158dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/background_button1"
+        android:text="@string/calcular"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold|italic"
+        android:theme="@style/BotaoPersonalizado"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:shapeAppearance="@style/BotaoPersonalizado" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

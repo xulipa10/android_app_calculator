@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BotaoPersonalizado">
+        <item name="android:background">@color/black</item> <!-- Arquivo de fundo personalizado -->
+        <item name="android:textColor">#FFFFFF</item> <!-- Cor do texto -->
+        <item name="android:textSize">16sp</item> <!-- Tamanho do texto -->
+        <item name="android:paddingLeft">16dp</item> <!-- Padding esquerdo -->
+        <item name="android:paddingRight">16dp</item> <!-- Padding direito -->
+        <item name="android:paddingTop">12dp</item> <!-- Padding superior -->
+        <item name="android:paddingBottom">12dp</item> <!-- Padding inferior -->
+
+    </style>
+
+</resources>

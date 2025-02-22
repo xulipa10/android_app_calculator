@@ -32,9 +32,6 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        all_widgets = ActivityTaxaMetabolicaBasalBinding.inflate(layoutInflater)
-        val view = all_widgets.root
-        setContentView(view)
         setContentView(R.layout.activity_taxa_metabolica_basal)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) {
             v, insets ->
@@ -53,6 +50,7 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
         var valor_atividade = 0.0
         val nivel_atividade = findViewById<TextView>(R.id.nivel_de_atividades)
         val resultado_f = findViewById<TextView>(R.id.resultado_f)
+        calcular.setBackgroundColor(applicationContext.getColor(R.color.black))
 
 
 
