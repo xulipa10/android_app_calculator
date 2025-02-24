@@ -28,16 +28,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:background="@drawable/botao_inicio"
+            android:elevation="10dp"
             android:onClick="abrirTaxa"
             android:paddingTop="10dp"
-            android:text="taxa metabolica basal" />
+            android:text="taxa metabolica basal"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/imc_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao_inicio"
+            android:elevation="10dp"
             android:paddingTop="10dp"
-            android:text="Índice de massa corporal" />
+            android:text="Índice de massa corporal"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <ImageView
