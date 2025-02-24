@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9bd0e2"
+    tools:context=".imc">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="279dp"
+        android:layout_height="191dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.546">
+
+        <EditText
+            android:id="@+id/peso_imc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/imputtext"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/peso_kg"
+            android:inputType="number"
+            android:paddingTop="10dp"
+            android:textColorHint="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/altura_imc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/imputtext"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/altura_em_centimetros"
+            android:inputType="number"
+            android:paddingTop="10dp"
+            android:textColorHint="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/imc_result"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/imputtext"
+            android:gravity="center"
+            android:hint="@string/resultado"
+            android:paddingTop="10dp"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calcular_imc"
+        android:layout_width="154dp"
+        android:layout_height="49dp"
+        android:background="@drawable/background_button1"
+        android:text="@string/calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="313dp"
+        android:layout_height="189dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518"
+        app:srcCompat="@drawable/img1" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="349dp"
+        android:layout_height="41dp"
+        android:gravity="center"
+        android:text="Índice de Massa Corporal (IMC)"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

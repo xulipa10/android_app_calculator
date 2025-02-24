@@ -6,18 +6,21 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.key.tools.calculator.databinding.ActivityTaxaMetabolicaBasalBinding
+
 
 
 class TaxaMetabolicaBasal : AppCompatActivity() {
-    private lateinit var all_widgets: ActivityTaxaMetabolicaBasalBinding
+
     var peso = 0.0
     var altura_em_cm = 0
     var idade = 0
@@ -41,6 +44,7 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
         }
 
         val calcular = findViewById<Button>(R.id.calcular)
+        val info = findViewById<ImageView>(R.id.info)
         val masculino = findViewById<CheckBox>(R.id.masculino)
         val feminino = findViewById<CheckBox>(R.id.feminino)
         val aviso = findViewById<TextView>(R.id.avisocheckbox)
@@ -50,7 +54,16 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
         var valor_atividade = 0.0
         val nivel_atividade = findViewById<TextView>(R.id.nivel_de_atividades)
         val resultado_f = findViewById<TextView>(R.id.resultado_f)
-        calcular.setBackgroundColor(applicationContext.getColor(R.color.black))
+        val cxmsg = AlertDialog.Builder(this)
+        cxmsg.setMessage("* Sedentário (pouco ou nenhum exercício)\n" +
+                "* Levemente ativo (exercícios/esportes leves de 1 a 3 dias/semana)\n" +
+                "* Moderadamente ativo (exercícios/esportes moderados de 3 a 5 dias/semana)\n" +
+                "* Muito ativo (exercícios/esportes pesados de 6 a 7 dias/semana)\n" +
+                "* Extremamente ativo (exercícios/esportes muito intensos e um trabalho físico)\n" +
+                "* Atleta se você treina como um atleta profissional")
+
+
+
 
 
 
@@ -143,6 +156,11 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
                 }
                 show()
             }
+        }
+
+        info.setOnClickListener {
+            cxmsg.setNeutralButton("OK", null)
+            cxmsg.show()
         }
 
 

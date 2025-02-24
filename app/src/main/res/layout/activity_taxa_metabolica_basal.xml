@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:backgroundTint="@color/design_default_color_secondary"
+    android:backgroundTint="#9bd0e2"
     tools:context=".TaxaMetabolicaBasal">
 
     <LinearLayout
@@ -108,7 +108,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/imputtext"
-                android:elevation="10dp"
+                android:elevation="2dp"
                 android:text="@string/homem"
                 android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -121,7 +121,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/imputtext"
-                android:elevation="10dp"
+                android:elevation="2dp"
                 android:text="@string/mulher"
                 android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -142,7 +142,7 @@
         android:id="@+id/textView"
         android:layout_width="356dp"
         android:layout_height="34dp"
-        android:background="@color/design_default_color_secondary"
+        android:background="#9bd0e2"
         android:gravity="center"
         android:text="@string/taxa_metabolica_basal"
         android:textColor="@color/black"
@@ -160,7 +160,7 @@
         android:id="@+id/textView2"
         android:layout_width="317dp"
         android:layout_height="28dp"
-        android:background="@color/design_default_color_secondary"
+        android:background="#9bd0e2"
         android:gravity="center"
         android:text="@string/harris_benedict"
         android:textColor="@color/black"
@@ -174,7 +174,6 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/calcular"
-        style="@style/BotaoPersonalizado"
         android:layout_width="158dp"
         android:layout_height="48dp"
         android:layout_marginBottom="4dp"
@@ -182,27 +181,28 @@
         android:elevation="10dp"
         android:text="@string/calcular"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/white"
         android:textStyle="bold|italic"
-        android:theme="@style/BotaoPersonalizado"
-        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:shapeAppearance="@style/BotaoPersonalizado" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/info"
         android:layout_width="29dp"
         android:layout_height="24dp"
         android:layout_marginStart="10dp"
         android:contentDescription="TODO"
+        android:elevation="10dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.517"
-        app:srcCompat="@drawable/triangulo" />
+        app:srcCompat="@drawable/triangulo"
+        tools:ignore="ContentDescription,HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,13 +26,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:onClick="abrirTaxa"
+            android:paddingTop="10dp"
             android:text="taxa metabolica basal" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/imc_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:paddingTop="10dp"
+            android:text="Índice de massa corporal" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
