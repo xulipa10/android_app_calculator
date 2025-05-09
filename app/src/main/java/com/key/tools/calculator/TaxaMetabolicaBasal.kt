@@ -57,8 +57,8 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
         val resultado_f = findViewById<TextView>(R.id.resultado_f)
         val cxmsg = AlertDialog.Builder(this)
         cxmsg.setMessage("* Sedentário (pouco ou nenhum exercício)\n" +
-                "* Levemente ativo (exercícios/esportes leves de 1 a 3 dias/semana)\n" +
-                "* Moderadamente ativo (exercícios/esportes moderados de 3 a 5 dias/semana)\n" +
+                "* Levemente ativo (exercícios/esportes leves de 1 a 3 dias/semana.)\n" +
+                "* Moderadamente ativo (exercícios/esportes moderados de 3 a 5 dias/semana.)\n" +
                 "* Muito ativo (exercícios/esportes pesados de 6 a 7 dias/semana)\n" +
                 "* Extremamente ativo (exercícios/esportes muito intensos e um trabalho físico)\n" +
                 "* Atleta se você treina como um atleta profissional.")
