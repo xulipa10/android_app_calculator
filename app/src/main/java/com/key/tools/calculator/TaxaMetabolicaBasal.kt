@@ -61,7 +61,7 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
                 "* Moderadamente ativo (exercícios/esportes moderados de 3 a 5 dias/semana)\n" +
                 "* Muito ativo (exercícios/esportes pesados de 6 a 7 dias/semana)\n" +
                 "* Extremamente ativo (exercícios/esportes muito intensos e um trabalho físico)\n" +
-                "* Atleta se você treina como um atleta profissional")
+                "* Atleta se você treina como um atleta profissional.")
 
 
 
