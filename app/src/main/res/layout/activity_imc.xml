@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="279dp"
-        android:layout_height="191dp"
+        android:layout_width="278dp"
+        android:layout_height="192dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,6 +59,7 @@
             android:gravity="center"
             android:hint="@string/resultado"
             android:paddingTop="10dp"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="20sp"
             android:textStyle="normal" />

@@ -1,6 +1,7 @@
 package com.key.tools.calculator
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
@@ -164,16 +165,18 @@ class TaxaMetabolicaBasal : AppCompatActivity() {
         }
 
 
-
-
-/// Calculadora de Taxa Metabólica Basal (Harris-Benedict)
-///Toast.makeText(applicationContext, masculino.isChecked.toString() + feminino.isChecked.toString(), Toast.LENGTH_LONG).show()
+        
 
 
         }
 
 
-
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val activity = Intent(this, MainActivity::class.java)
+        startActivity(activity)
+        finish()
+    }
 
 
 
